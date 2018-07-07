@@ -5,13 +5,11 @@ import { Recipe } from '../recipes/recipe.model'
 import { AuthService } from '../auth/auth.service';
 import 'rxjs/add/operator/map';
 
-
 @Injectable()
 export class DataStorageService {
     constructor(private httpClient: HttpClient, 
                 private recipeService: RecipeService,
                 private authService: AuthService) {
-
     }
 
     storeRecipes() {
@@ -37,6 +35,5 @@ export class DataStorageService {
                     return recipes
                 }
             )
-       
       }
 }
